@@ -1,0 +1,72 @@
+﻿django-admin startproject MyApi
+cd MyApi
+# run the server
+python manage.py runserver
+#
+python manage.py migrate
+#
+python manage.py runserver
+python manage.py createsuperuser
+# user: myapi
+# email:georgi.tanev86@gmail.com
+# pass: gogo123$
+#
+# user: georgi
+# pass: gogo123$
+
+# https://www.django-rest-framework.org/#example
+# https://www.django-rest-framework.org/api-guide/authentication/
+
+# creating new app
+python manage.py startapp firstApp
+# creating new dir in firstApp > api
+create api (folder)
+
+# creating first API
+# make migrations:
+python manage.py makemigrations
+# in api/urls.py 'urlpattern' should be 'urlpatterns'
+python manage.py migrate
+
+# video 4 django-rest-auth installation and creating users
+pip install django-rest-auth
+# make migration
+python manage.py migrate
+
+# installing auth
+pip install django-allauth
+
+python manage.py runserver
+
+# video #7 (9:49min)
+# myapi token: 	beb199674d8e5931d4941bf550cdf08f685929d2
+# georgi token: 9e7f7792d4cc761dc21bfd7abd692764433f9226
+# auth url: http://127.0.0.1:8000/first-app/first
+# Key: Authorization
+# Value: Token beb199674d8e5931d4941bf550cdf08f685929d2
+
+# video #8
+
+# video #9
+python manage.py makemigrations
+python manage.py migrate
+
+# video #10
+
+# video #11 - Gledaj pak, 4e bqh izmoren
+
+# video #12
+
+# video #13
+# video #14 - create not needed for task
+# video #15 - delete not needed for task
+# video #16 - Many To One Relationship, Nested Data
+# video #17 - APIView GET & POST Requests.
+# creating new app 'cars'
+python manage.py startapp cars
+# create table cars
+python manage.py migrate
+python manage.py makemigrations
+
+# video #18
+
