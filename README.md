@@ -3,3 +3,4 @@ https://github.com/Georgitanev/py_django_scrape/blob/main/scraper/scraper/spider
 
 db.sqlite
 https://github.com/Georgitanev/py_django_scrape/blob/main/MyApi/db.sqlite3
+DB.table = 'Parliament1'
