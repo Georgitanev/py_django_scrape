@@ -31,6 +31,7 @@ class ParliamentList(generics.ListAPIView):
     filter_backends = [DjangoFilterBackend]
     queryset = Parliament1.objects.all()
     print(filter_backends)
-    filterset_fields = ['id', 'date_born', 'name', 'place_born', 'profession', 'lang', 'party', 'email', 'fb']
+    filterset_fields = ['id', 'date_born', 'name', 'place_born', 'profession',
+                        'lang', 'party', 'email', 'fb', 'pp', 'dob']
 
 

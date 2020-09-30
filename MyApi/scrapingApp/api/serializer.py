@@ -7,7 +7,7 @@ class ParliamentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Parliament1
-        fields = ['id',  'date_born', 'name', 'place_born',  #
-                  'profession', 'lang', 'party', 'email', 'fb']
+        fields = ['id',  'date_born', 'name', 'place_born',
+                  'profession', 'lang', 'party', 'email', 'fb']  # , 'pp', 'dob'
         depth = 1
 

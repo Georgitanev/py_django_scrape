@@ -14,6 +14,8 @@ class Parliament1(models.Model):
     email = models.CharField(max_length=80, blank=True, null=True)
     fb = models.CharField(max_length=80, blank=True, null=True)
     url = models.TextField(max_length=15, blank=True, null=True)
+    pp = models.TextField(max_length=10, blank=True, null=True)
+    dob = models.TextField(max_length=15, blank=True, null=True)
 
     def __str__(self):
         return self.name
