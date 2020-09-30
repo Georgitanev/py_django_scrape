@@ -1,5 +1,7 @@
-# Object file
-*.o
+﻿# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
-# Ada Library Information
-*.ali
+# C extensions
+*.so
