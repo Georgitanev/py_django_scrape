@@ -5,16 +5,6 @@
 
 
 import sqlite3
-# class ParliamentPipeline(object):
-#     def process_item(self, item, spider):
-#         item.save()
-#         return item
-
-################
-
-# class ScraperPipeline:
-#     def process_item(self, item, spider):
-#         return item
 
 
 class ParliamentPipeline:
@@ -32,7 +22,7 @@ class ParliamentPipeline:
         return item
 
     def store_db(self, item):
-        self.curr.execute("""insert into Parliament1 values (NULL,?,?,?,?,?,?,?,?,?)""", (
+        self.curr.execute("""insert into Parliament1 values (NULL,?,?,?,?,?,?,?,?,?,?,?)""", (
             item['name'],
             item['date_born'],
             item['place_born'],
@@ -41,7 +31,10 @@ class ParliamentPipeline:
             item['party'],
             item['email'],
             item['fb'],
-            item['url']
+            item['url'],
+            item['pp'],
+            item['dob']
+
         ))
         self.conn.commit()
 

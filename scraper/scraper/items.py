@@ -16,4 +16,5 @@ class ParliamentPipeline(scrapy.Item):
     email = scrapy.Field()
     fb = scrapy.Field()
     url = scrapy.Field()
-
+    pp = scrapy.Field()
+    dob = scrapy.Field()

@@ -1,0 +1,22 @@
+To run crawling spyder use:
+cd scraper
+scrapy crawl posts
+
+To save them in Json file use:
+scrapy crawl posts -o result.json -t json
+
+Downloading and parsing this data:
+"""
+'name': name,
+'date_born': date_born,
+'place_born': place_born,
+'profession': profession,
+'lang': lang,
+'party': party,
+'email': email,
+'fb': fb_href,
+'pp': short_party_name,
+'dob': date_of_birth_numbers_only
+"""
+
+
