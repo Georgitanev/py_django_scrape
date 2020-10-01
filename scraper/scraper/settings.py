@@ -12,7 +12,7 @@ BOT_NAME = 'scraper'
 SPIDER_MODULES = ['scraper.spiders']
 NEWSPIDER_MODULE = 'scraper.spiders'
 FEED_EXPORT_ENCODING = 'utf-8'
-DOWNLOAD_DELAY = 30
+DOWNLOAD_DELAY = 65
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
