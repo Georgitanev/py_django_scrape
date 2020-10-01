@@ -6,6 +6,8 @@ from scrapy.http import Request
 from ..items import ParliamentPipeline
 import sqlite3
 from datetime import datetime
+import random
+
 
 ppdict = {
     'ПП ГЕРБ': "GERP",
@@ -49,7 +51,7 @@ def extract_date_place(date_born_place):
     return date_born, place_born
 
 
-def parse_following_urls(response): # , extract_date_place, ppdict
+def parse_following_urls(response):
     """ extracting 3 names"""
     items = ParliamentPipeline()
     first_name = response.css('strong::text')[0].get()
@@ -126,6 +128,6 @@ class PostsSpider(scrapy.Spider):
         rows = (i[0] for i in rows_urls)
         urls_short_unique = (i for i in urls_short if i not in rows)
         start_urls = ['https://www.parliament.bg' + short for short in urls_short_unique]
-        start_urls = start_urls[:80]
+        start_urls = start_urls[:random.randint(45, 60)]
         for url in start_urls:
             yield Request(url, callback=parse_following_urls, dont_filter=True)
