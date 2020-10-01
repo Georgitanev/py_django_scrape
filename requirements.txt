@@ -8,6 +8,8 @@ cffi @ file:///C:/ci/cffi_1600699246375/work
 chardet==3.0.4
 colorama==0.4.3
 constantly==15.1.0
+coreapi==2.3.3
+coreschema==0.0.4
 cryptography @ file:///C:/ci/cryptography_1601046905460/work
 cssselect==1.1.0
 defusedxml==0.6.0
@@ -16,18 +18,25 @@ django-allauth==0.42.0
 django-filter==2.4.0
 django-rest-auth==0.9.5
 djangorestframework==3.11.1
+drf-yasg==1.17.1
+genson==1.2.2
 hyperlink @ file:///tmp/build/80754af9/hyperlink_1600360282274/work
 idna @ file:///tmp/build/80754af9/idna_1593446292537/work
 incremental==17.5.0
+inflection==0.5.1
 iniconfig @ file:///tmp/build/80754af9/iniconfig_1596827328212/work
 itemadapter @ file:///tmp/build/80754af9/itemadapter_1598654773526/work
 itemloaders @ file:///tmp/build/80754af9/itemloaders_1599702791960/work
+itypes==1.2.0
+Jinja2==2.11.2
 jmespath @ file:///tmp/build/80754af9/jmespath_1594304593830/work
 jsonpointer==2.0
 jsonschema==3.2.0
 lxml @ file:///C:/ci/lxml_1594822774489/work
+MarkupSafe==1.1.1
 more-itertools @ file:///tmp/build/80754af9/more-itertools_1598884071673/work
 oauthlib==3.1.0
+openapi-codec==1.3.2
 packaging==20.4
 parsel==1.6.0
 pluggy==0.13.1
@@ -46,19 +55,25 @@ pytest-runner==5.2
 python3-openid==3.2.0
 pytz==2020.1
 pywin32==227
+PyYAML==5.3.1
 queuelib==1.5.0
 requests==2.24.0
 requests-oauthlib==1.3.0
 rfc3987==1.3.8
+ruamel.yaml==0.16.12
+ruamel.yaml.clib==0.2.2
 Scrapy @ file:///C:/ci/scrapy_1598649882180/work
 scrapy-djangoitem==1.1.1
 scrapy-jsonschema==0.4.2
 service-identity @ file:///tmp/build/80754af9/service_identity_1592494375577/work
+simplejson==3.17.2
 six==1.15.0
 sqlparse==0.3.1
 strict-rfc3339==0.7
+swagger-spec-validator==2.7.3
 toml @ file:///tmp/build/80754af9/toml_1592853716807/work
 Twisted==20.3.0
+uritemplate==3.0.1
 urllib3==1.25.10
 w3lib==1.22.0
 webcolors==1.11.1

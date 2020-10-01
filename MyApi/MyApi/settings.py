@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'scrapingApp',
     'django_filters',
+    'drf_yasg',
 ]
 
 SITE_ID = 1
@@ -114,7 +115,7 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     # 'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
-
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 10,
     'PAGINATE_BY': 10,                 # Default to 10
