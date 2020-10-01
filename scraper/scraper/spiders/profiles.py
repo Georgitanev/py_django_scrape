@@ -49,7 +49,7 @@ def extract_date_place(date_born_place):
     return date_born, place_born
 
 
-def parse_following_urls(response, extract_date_place, ppdict):
+def parse_following_urls(response): # , extract_date_place, ppdict
     """ extracting 3 names"""
     items = ParliamentPipeline()
     first_name = response.css('strong::text')[0].get()

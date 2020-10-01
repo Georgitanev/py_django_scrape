@@ -10,7 +10,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 
 @api_view()
-@permission_classes([AllowAny])
+@permission_classes([IsAuthenticated])
 def firstFunction(request):
     print(request.query_params)
     print(request.query_params['num'])
@@ -19,14 +19,7 @@ def firstFunction(request):
     return Response({'message': "we received your request", 'result': new_number})
 
 
-# class ParliamentViewset(viewsets.ModelViewSet):
-#     serializer_class = ParliamentSerializer
-#
-#     def get_queryset(self):
-#         data_all = Parliament1.objects.all()
-#         return data_all
-
-
+@permission_classes([IsAuthenticated])
 class ParliamentList(generics.ListAPIView):
     serializer_class = ParliamentSerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
@@ -36,16 +29,3 @@ class ParliamentList(generics.ListAPIView):
     filterset_fields = ['id', 'date_born', 'name', 'place_born', 'profession',
                         'lang', 'party', 'email', 'fb', 'pp', 'dob']
 
-
-class UserListView(generics.ListAPIView):
-    queryset = Parliament1.objects.all()
-    # queryset = name.objects.all()
-    serializer_class = UserSerializer
-    filter_backends = [filters.SearchFilter]
-    search_fields = ['name']
-
-# class UserListView(generics.ListAPIView):
-#     queryset = User.objects.all()
-#     serializer_class = UserSerializer
-#     filter_backends = [filters.SearchFilter]
-#     search_fields = ['username', 'email']
