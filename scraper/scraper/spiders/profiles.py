@@ -130,6 +130,6 @@ class PostsSpider(scrapy.Spider):
         rows = [i[0] for i in rows_urls]
         urls_short_unique = [i for i in urls_short if i not in rows]
         start_urls = ['https://www.parliament.bg' + short for short in urls_short_unique]
-        start_urls = start_urls[:random.randint(200, 250)]
+        start_urls = start_urls[:random.randint(100, 140)]
         for url in start_urls:
             yield Request(url, callback=parse_following_urls, dont_filter=True)
