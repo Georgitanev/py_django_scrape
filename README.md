@@ -22,3 +22,10 @@ db.sqlite https://github.com/Georgitanev/py_django_scrape/blob/main/MyApi/db.sql
 Db path in 'py\scraper\scraper.py':17 row
 to change db path 'D:\\git\\24_09_2019_download_repos\\py\\MyApi\\db.sqlite3'
 DB.table = 'Parliament1'
+
+http://127.0.0.1:8000/scraping-app/mp:?id=30
+added:
+HTTP 200 OK
+Allow: GET, OPTIONS
+Content-Type: application/json
+Vary: Accept
