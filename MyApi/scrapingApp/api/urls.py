@@ -10,7 +10,7 @@ from rest_framework.routers import DefaultRouter
 
 
 urlpatterns = [
-    url('first/', firstFunction),
+    url('mp:', firstFunction),
     url('list', ParliamentList.as_view())  # as_view()
 ]
 

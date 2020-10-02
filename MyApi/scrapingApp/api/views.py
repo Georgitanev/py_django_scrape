@@ -12,11 +12,13 @@ from django_filters.rest_framework import DjangoFilterBackend
 @api_view()
 @permission_classes([IsAuthenticated])
 def firstFunction(request):
-    print(request.query_params)
-    print(request.query_params['num'])
-    number = request.query_params['num']
-    new_number = int(number) * 2
-    return Response({'message': "we received your request", 'result': new_number})
+    print(request.query_params['id'])
+    number = request.query_params['id']
+    mp = Parliament1.objects.values('id', 'date_born', 'name', 'place_born', 'profession', 'lang', 'party',
+                               'email', 'fb', 'url', 'pp', 'dob').filter(id=number)
+    print(Parliament1.objects.values('id',  'date_born', 'name', 'place_born', 'profession', 'lang', 'party',
+                                     'email', 'fb', 'url', 'pp', 'dob').filter(id=number))
+    return Response(mp)
 
 
 @permission_classes([IsAuthenticated])
