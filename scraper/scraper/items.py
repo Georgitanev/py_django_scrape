@@ -1,4 +1,4 @@
-# Define here the models for your scraped items
+""" Parliament Pipeline"""
 #
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/items.html
@@ -6,7 +6,8 @@ import scrapy
 
 
 class ParliamentPipeline(scrapy.Item):
-    # define the fields for your item here like:
+    """ Parliament Pipeline"""
+
     name = scrapy.Field()
     date_born = scrapy.Field()
     place_born = scrapy.Field()

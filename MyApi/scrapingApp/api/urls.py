@@ -1,16 +1,9 @@
-from django.conf.urls import url, include
-from .views import firstFunction
+from django.conf.urls import url
+
 from .views import ParliamentList
-from rest_framework.routers import DefaultRouter
-
-# from .views import ParliamentViewset
-
-# router = DefaultRouter()
-# router.register('parliament', ParliamentViewset, basename='Parliament1')
-
+from .views import firstFunction
 
 urlpatterns = [
-    url('mp:', firstFunction),
-    url('list', ParliamentList.as_view())  # as_view()
+    url("mp:", firstFunction),
+    url("list", ParliamentList.as_view()),  # as_view()
 ]
-

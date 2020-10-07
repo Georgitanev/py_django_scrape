@@ -1,5 +1,8 @@
+""" scrapingApp"""
 from django.apps import AppConfig
 
 
 class ScrapingappConfig(AppConfig):
-    name = 'scrapingApp'
+    """ scrapingApp"""
+
+    name = "scrapingApp"
