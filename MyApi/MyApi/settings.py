@@ -112,14 +112,15 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
-    # 'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    # Use Django's standard `django.contrib.auth` permissions, or allow
+    # read-only access for unauthenticated users. 'DEFAULT_FILTER_BACKENDS':
+    # ['django_filters.rest_framework.DjangoFilterBackend'],
     "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "PAGE_SIZE": 10,
     "PAGINATE_BY": 10,  # Default to 10
-    "PAGINATE_BY_PARAM": "page_size",  # Allow client to override, using `?page_size=xxx`.
+    "PAGINATE_BY_PARAM": "page_size",  # Allow client to override, using
+    # `?page_size=xxx`.
     "MAX_PAGINATE_BY": 10,  # Maximum limit allowed when using `?page_size=xxx`.
     "DEFAULT_AUTHENTICATION_CLASSES": [
         # 'rest_framework.authentication.BasicAuthentication',

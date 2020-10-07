@@ -1,5 +1,6 @@
 """Profiles"""
 
+import os
 import random
 import sqlite3
 from datetime import datetime
@@ -57,7 +58,8 @@ def extract_date_place(date_born_place):
 
 
 def parse_following_urls(response):
-    """ extracting 3 names, date and place of birth, profession, lang, party, e-mail, fb"""
+    """extracting 3 names, date and place of birth,
+    profession, lang, party, e-mail, fb"""
     items = ParliamentPipeline()
     first_name = response.css("strong::text")[0].get()
     second_name = response.css(".MProwD::text").get()
@@ -65,7 +67,8 @@ def parse_following_urls(response):
     name = f"{first_name}{second_name}{third_name}"
     data = response.xpath("//div[4]/div[2]/div/ul/li/text()").getall()
     date_born, place_born = extract_date_place(data[0])
-    lang_row = 2  # defining lang and party rows because some rows are missing sometimes
+    lang_row = 2  # defining lang and party rows because some rows are
+    # missing sometimes
     party_row = 3
     if data[1].startswith("Професия:"):
         profession = data[1][data[1].find(": ") + 2 : -1]
@@ -96,6 +99,7 @@ def parse_following_urls(response):
                     -2
                 ]
     except BaseException as ex:  # if e-mail and fb_link are missing
+        print(ex)
         email = None
         fb_href = None
     items["name"] = name
@@ -120,19 +124,18 @@ class PostsSpider(scrapy.Spider):
     start_urls = ["https://www.parliament.bg/bg/MP/"]
 
     def parse(self, response):
-        # parse any elements you need from the start_urls and, optionally, store them as Items.
+        # parse any elements you need from the start_urls and, optionally,
+        # store them as Items.
         # See http://doc.scrapy.org/en/latest/topics/items.html
         selector = Selector(response)
         urls_short = selector.xpath("//div[3]/div/div/div/a/@href").getall()
         # get unique from 2 different lists short_urls and links from DB
-        conn = sqlite3.connect(
-            "D:\\git\\24_09_2019_download_repos\\py\\MyApi\\db.sqlite3"
-        )
+        path = os.path.dirname(os.path.abspath(__file__))
+        db = os.path.join(path, "db.sqlite3")
+        conn = sqlite3.connect(db)
         c = conn.cursor()
         c.execute("SELECT url FROM Parliament1;")
         rows_urls = c.fetchall()
-        # rows = (i[0] for i in rows_urls)
-        # urls_short_unique = (i for i in urls_short if i not in rows)
         rows = [i[0] for i in rows_urls]
         urls_short_unique = [i for i in urls_short if i not in rows]
         start_urls = [
