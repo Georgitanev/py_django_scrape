@@ -5,7 +5,10 @@ from scrapingApp.models import Parliament1
 
 class ParliamentSerializer(serializers.ModelSerializer):
     """ table columns """
+
     class Meta:
+        """ table columns """
+
         model = Parliament1
         fields = [
             "id",

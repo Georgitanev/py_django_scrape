@@ -16,7 +16,9 @@ FEED_EXPORT_ENCODING = "utf-8"
 DOWNLOAD_DELAY = 65
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+USER_AGENT = (
+    "Mozilla/5.0 (compatible; Googlebot/2.1; " "+http://www.google.com/bot.html) "
+)
 
 # Obey robots.txt rules
 # ROBOTSTXT_OBEY = True
@@ -84,7 +86,8 @@ ITEM_PIPELINES = {
 # AUTOTHROTTLE_DEBUG = False
 
 # Enable and configure HTTP caching (disabled by default)
-# See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
+# See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
+# #httpcache-middleware-settings
 # HTTPCACHE_ENABLED = True
 # HTTPCACHE_EXPIRATION_SECS = 0
 # HTTPCACHE_DIR = 'httpcache'
